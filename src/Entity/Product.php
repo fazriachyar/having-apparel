@@ -63,7 +63,7 @@ class Product
 
     public function getCategoryId(): ?int
     {
-        return $this->category;
+        return $this->categoryId;
     }
 
     public function setCategoryId(string $categoryId): self

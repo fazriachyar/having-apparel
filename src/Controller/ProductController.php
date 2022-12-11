@@ -17,7 +17,7 @@ class ProductController extends AbstractController
     /** @var Generator */
     protected $faker;
 
-    #[Route('/product/view', name: 'view_product', methods: ['GET', 'HEAD'])]
+    #[Route('/product/view', name: 'view_product', methods: ['GET'])]
     public function viewAction(ManagerRegistry $doctrine): Response
     {
         $em = $doctrine->getManager();
@@ -29,13 +29,14 @@ class ProductController extends AbstractController
         return $this->json($viewAllProduct);
     }
 
-    #[Route('/product/view/{id}', name: 'view_product', methods: ['GET', 'HEAD'])]
+    #[Route('/product/view/{id}', name: 'view_productById', methods: ['GET', 'HEAD'])]
     public function viewByIdAction(ManagerRegistry $doctrine, int $id): Response
     {
         $em = $doctrine->getManager();
         $viewByIdProduct = $em->getRepository(Product::class)
             ->findOneBy([
-                "id" => $id
+                "id" => $id,
+                "action" => ['U','I']
             ]);
 
         if(!$viewByIdProduct){
@@ -58,7 +59,7 @@ class ProductController extends AbstractController
             $mock->setName($this->faker->word());
             $mock->setQuantity($this->faker->numberBetween(0,500));
             $mock->setPrice($this->faker->numberBetween(20000,100000));
-            $mock->setCategoryId(1);
+            $mock->setCategoryId($this->faker->numberBetween(1,10));
             $mock->setAction("I");
             $mock->setAddTime($this->faker->dateTime());
             $em->persist($mock);
@@ -66,6 +67,32 @@ class ProductController extends AbstractController
         $em->flush();
 
         return $this->json(['message' => 'Success Create '.$i.' Mock Data']);
+    }
+
+    #[Route('/product/edit', name: 'edit_product', methods: ['PUT'])]
+    public function editAction(ManagerRegistry $doctrine, Request $request): Response
+    {
+        $em = $doctrine->getManager();
+        $data = json_decode($request->getRequest(), true);
+
+        $product = $em->getRepository(Product::class)
+            ->findOneBy([
+                'id' => $data['id']
+            ]);
+        if(!$product){
+            $product = ["messages" => "Product not found"];
+        } else {
+            $product->setName($data['name']);
+            $product->setQuantity($data['quantity']);
+            $product->setAction('U');
+            $product->setAddTime(new \DateTime());
+            $product->setPrice($data['price']);
+            $product->setCategoryId($data['categoryId']);
+            $em->persist($product);
+            $em->flush();
+        }
+
+        return $this->json(['message' => 'Success Update '.$product->getName().' Data']);
     }
 
     #[Route('/product/delete', name: 'delete_product', methods: ['POST'])]

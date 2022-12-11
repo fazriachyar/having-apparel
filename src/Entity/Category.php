@@ -19,6 +19,9 @@ class Category
     #[ORM\Column]
     private ?int $brandId = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $action = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Category
     public function setBrandId(int $brandId): self
     {
         $this->brandId = $brandId;
+
+        return $this;
+    }
+
+    public function getAction(): ?string
+    {
+        return $this->action;
+    }
+
+    public function setAction(string $action): self
+    {
+        $this->action = $action;
 
         return $this;
     }
