@@ -1,5 +1,5 @@
 <?php
-header("refresh: 5; http://fazriachyar.my.id/symfony/public/index.php");
+header("refresh: 5; http://fazriachyar.my.id/api/public/index.php");
 
 	echo '<title>Symfony Installed</title><div style="background: #e9ffed; border: 1px solid #b0dab7; padding: 15px;" align="center" >
 	<font size="5" color="#182e7a">Symfony is installed successfully.</font><br /><br />
