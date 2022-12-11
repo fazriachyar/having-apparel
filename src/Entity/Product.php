@@ -20,17 +20,17 @@ class Product
     #[ORM\Column]
     private ?int $quantity = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $category = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $brand = null;
+    #[ORM\Column]
+    private ?int $categoryId = null;
 
     #[ORM\Column(length: 255)]
     private ?string $action = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $addTime = null;
+
+    #[ORM\Column]
+    private ?int $price = null;
 
     public function getId(): ?int
     {
@@ -61,26 +61,14 @@ class Product
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getCategoryId(): ?int
     {
         return $this->category;
     }
 
-    public function setCategory(string $category): self
+    public function setCategoryId(string $categoryId): self
     {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    public function getBrand(): ?string
-    {
-        return $this->brand;
-    }
-
-    public function setBrand(string $brand): self
-    {
-        $this->brand = $brand;
+        $this->categoryId = $categoryId;
 
         return $this;
     }
@@ -105,6 +93,18 @@ class Product
     public function setAddTime(\DateTimeInterface $addTime): self
     {
         $this->addTime = $addTime;
+
+        return $this;
+    }
+
+    public function getPrice(): ?int
+    {
+        return $this->price;
+    }
+
+    public function setPrice(int $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }
