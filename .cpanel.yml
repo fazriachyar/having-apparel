@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/fazriach/api
-    - /bin/cp -R /home/fazriach/repositories/havingApparel $DEPLOYPATH
+    - export DEPLOYPATH=/home/fazriach/api/
+    - /bin/cp -R /home/fazriach/repositories/havingApparel/ $DEPLOYPATH
