@@ -1,0 +1,33 @@
+_id: req_ee813e21093645609f1264617ab2e328
+type: Request
+parentId: fld_8d4002aaea8a4e8fb0ffb56250cf18f9
+modified: 1670748636824
+created: 1670160522750
+url: http://localhost:8000/product/add
+name: add
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Aqua 2000 mL",
+    	"quantity": 100,
+    	"category": "Minuman",
+    	"brand": "Aqua",
+    	"price": 5000,
+    	"productCode": "MN-001"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670162412632
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

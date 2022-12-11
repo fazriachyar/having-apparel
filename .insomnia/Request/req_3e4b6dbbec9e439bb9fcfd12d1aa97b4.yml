@@ -1,0 +1,24 @@
+_id: req_3e4b6dbbec9e439bb9fcfd12d1aa97b4
+type: Request
+parentId: fld_8d4002aaea8a4e8fb0ffb56250cf18f9
+modified: 1670655443006
+created: 1670110453492
+url: localhost:8000/product/view
+name: viewAll
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NzA2NTU0MzMsImV4cCI6MTY3MDY1OTAzMywicm9sZXMiOlsiU1VQRVJfQURNSU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJmYXpyaSJ9.Mp0Y86uvOV9PgsxDuAwe7zYuiKpLn9hVnYVdtjKXiv6OLIPkEXm3xWt49V_ZWzKNRqRAjo-QVcW-XOWQIZdlCsXHcInKCOuUN5Qp-OS5bTpUWqzfjFl0VsjxLtLhpZmj8BO0OLG7gVK04cm_v37HbghH9jfi_Apx9DY6r5aOOkxRpM78lGJBnmYb-Alg97A-PKfH_qbNtgyoqVeTVqZEbmPjDi4EJL3LkjijfTKmFSX4XSPuFWCG1s3Xn2rZrk6Rv3xQjTfUIZ0hV3S1KRYXP8NdmVgJHk_NBHWkDlOaZuNwAkm1w5TNqWJeFxppnJvlKth8N4KDd6jQtsxhPBTiJw
+  disabled: false
+metaSortKey: -1670162412682
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

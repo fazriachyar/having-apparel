@@ -1,0 +1,25 @@
+_id: req_6bd7280f90f748aeaeb1fbfddcfe8d39
+type: Request
+parentId: fld_8d4002aaea8a4e8fb0ffb56250cf18f9
+modified: 1670503997480
+created: 1670117208161
+url: localhost:8000/product/1
+name: viewById
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670162412732
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
