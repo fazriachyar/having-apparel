@@ -1,4 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/fazriach/public_html/api
-    - /bin/cp -R * $DEPLOYPATH
+    - export DEPLOYPATH=/home/fazriach/api
+    - /bin/cp -R /home/fazriach/repo/public_html $DEPLOYPATH
+    - /bin/cp -R /home/fazriach/repo/lib $DEPLOYPATH
