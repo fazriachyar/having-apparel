@@ -1,0 +1,28 @@
+_id: req_37473d75202c46679aaebdca7314559a
+type: Request
+parentId: fld_8d4002aaea8a4e8fb0ffb56250cf18f9
+modified: 1670503993461
+created: 1670162412582
+url: http://localhost:8000/product/delete
+name: delete
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id":1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670162412582
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
